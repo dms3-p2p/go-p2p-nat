@@ -9,11 +9,11 @@ import (
 	"time"
 
 	nat "github.com/fd/go-nat"
-	logging "github.com/ipfs/go-log"
+	logging "github.com/dms3-fs/go-log"
 	goprocess "github.com/jbenet/goprocess"
 	periodic "github.com/jbenet/goprocess/periodic"
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr-net"
+	ma "github.com/dms3-mft/go-multiaddr"
+	manet "github.com/dms3-mft/go-multiaddr-net"
 )
 
 var (
@@ -166,9 +166,9 @@ func (nat *NAT) establishMapping(m *mapping) {
 	oldport := m.ExternalPort()
 
 	log.Debugf("Attempting port map: %s/%d", m.Protocol(), m.InternalPort())
-	comment := "libp2p"
+	comment := "dms3-p2p"
 	if m.comment != "" {
-		comment = "libp2p-" + m.comment
+		comment = "dms3-p2p-" + m.comment
 	}
 
 	nat.natmu.Lock()

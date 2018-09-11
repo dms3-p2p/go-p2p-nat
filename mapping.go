@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/jbenet/goprocess"
-	ma "github.com/multiformats/go-multiaddr"
-	manet "github.com/multiformats/go-multiaddr-net"
+	ma "github.com/dms3-mft/go-multiaddr"
+	manet "github.com/dms3-mft/go-multiaddr-net"
 )
 
 // Mapping represents a port mapping in a NAT.
